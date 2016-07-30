@@ -3,11 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'events-list',
   moduleId: module.id,
-  templateUrl: 'events-list.component.html',
-  styles: [`
-    .pad-left { margin-left:10px; }
-    .well div { color: #bbb }
-  `]
+  templateUrl: 'events-list.component.html'
 })
 export class EventsListComponent {
   event = {

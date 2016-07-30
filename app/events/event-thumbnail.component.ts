@@ -12,16 +12,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
         <span>Location: {{event.location.address}}</span>
         <span class="pad-left">{{event.location.city}}, {{event.location.country}}</span>
       </div>
-      <button (click)="handleClickMe()">Click me!</button>
     </div>
   `
 })
 export class EventThumbnailComponent {
   @Input() event:any
-  @Output() eventClick = new EventEmitter;
+  someProperty:any = "Some value"
 
-  handleClickMe() {
-    this.eventClick.emit(this.event.name);
+  logFoo() {
+    console.log('foo')
   }
-
 }

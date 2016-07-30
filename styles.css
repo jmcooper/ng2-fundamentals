@@ -12,6 +12,9 @@
   cursor: pointer;
 }
 
+button {
+  color: #555;
+}
 
 .toast-success {
   background-color: #51a351;

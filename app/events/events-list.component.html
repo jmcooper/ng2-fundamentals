@@ -3,15 +3,12 @@
   <hr/>
   <div class="well hoverwell thumbnail">
     <h2>{{event.name}}</h2>
-    <span>Date:</span>
-    <span>{{event.date}}</span><br>
-    <span>Time:</span>
-    <span>{{event.time}}</span><br>
-    <span>Price:</span>
-    <span>${{event.price}}</span><br>
-    <span>Location:</span>
-    <span>{{event.location.address}}</span>
-    <span>&nbsp;</span>
-    <span>{{event.location.city}}, {{event.location.country}}</span>
+    <div>Date: {{event.date}}</div>
+    <div>Time: {{event.time}}</div>
+    <div>Price: ${{event.price}}</div>
+    <div>
+      <span>Location: {{event.location.address}}</span>
+      <span class="pad-left">{{event.location.city}}, {{event.location.country}}</span>
+    </div>
   </div>
 </div>

@@ -7,9 +7,7 @@ import { EventThumbnailComponent } from './event-thumbnail.component';
     <div>
     <h1>Upcoming Angular 2 Events</h1>
     <hr/>
-	  <event-thumbnail #thumbnail [event]="event1"></event-thumbnail>
-    <button (click)="thumbnail.logFoo()">Log me some foo</button> 
-    <h3>{{thumbnail.someProperty}}</h3>
+	  <event-thumbnail [event]="event1"></event-thumbnail>
   `,
   directives: [EventThumbnailComponent]
 })

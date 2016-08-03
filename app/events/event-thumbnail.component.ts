@@ -1,9 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input Output, EventEmitter  } from '@angular/core';
 
 @Component({
   selector: 'event-thumbnail',
   template: `
-    <div class="well hoverwell thumbnail">
+    <div class="well hoverwell thumbnail" (click)="handleClickMe()">
       <h2>{{event.name}}</h2>
       <div>Date: {{event.date}}</div>
       <div>Time: {{event.time}}</div>
@@ -16,9 +16,15 @@ import { Component, Input } from '@angular/core';
   `,
   styles: [`
     .pad-left { margin-left: 10px; }
-    
+    .well div { color: #bbb }
   `]
 })
 export class EventThumbnailComponent {
   @Input() event:any
+  @Output() eventClick = new EventEmitter;
+
+  handleClickMe() {
+      this.eventClick.emit(this.event.name);
+  }
+
 }

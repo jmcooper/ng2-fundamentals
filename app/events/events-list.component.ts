@@ -7,7 +7,7 @@ import { EventThumbnailComponent } from './event-thumbnail.component';
     <div>
     <h1>Upcoming Angular 2 Events</h1>
     <hr/>
-	  <event-thumbnail [event]="event1"></event-thumbnail>
+	  <event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event1"></event-thumbnail>
   `,
   directives: [EventThumbnailComponent]
 })
@@ -28,4 +28,9 @@ export class EventsListComponent {
 
   constructor() {
   }  
+
+  handleEventClicked(data) {
+    console.log('received:', data);
+  }
+
 }

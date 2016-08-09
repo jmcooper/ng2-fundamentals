@@ -13,7 +13,7 @@ import { Component, Input, Output, EventEmitter  } from '@angular/core';
         <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
       </div>
       <div>
-        Online Url: {{event.onlineUrl}}
+        Online Url: {{event?.onlineUrl}}
       </div>
     </div>
   `,
@@ -21,6 +21,7 @@ import { Component, Input, Output, EventEmitter  } from '@angular/core';
     .pad-left { margin-left: 10px; }
     .thumbnail { min-height: 210px; }
     .well div { color: #bbb }
+    .thumbnail { min-height: 210px; }
   `]
 })
 export class EventThumbnailComponent {

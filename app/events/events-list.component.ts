@@ -9,7 +9,7 @@ import { EventThumbnailComponent } from './event-thumbnail.component';
     <hr/>
     <div class="row">
       <div *ngFor="let event of events" class="col-md-5">
-        <event-thumbnail (eventClick)="handleEventClicked($event)"></event-thumbnail>
+        <event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event"></event-thumbnail>
       </div>
     </div>
   `,

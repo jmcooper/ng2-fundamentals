@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter  } from '@angular/core';
     <div class="well hoverwell thumbnail" (click)="handleClickMe()">
       <h2>{{event?.name}}</h2>
       <div>Date: {{event?.date}}</div>
-      <div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">Time: {{event?.time}}
+      <div [ngStyle]="getStartTimeStyle()" [ngSwitch]="event?.time">Time: {{event?.time}}
         <span *ngSwitchCase="'8:00 am'">(Early Start)</span>
         <span *ngSwitchCase="'10:00 am'">(Late Start)</span>
         <span *ngSwitchDefault>(Normal Start)</span>
@@ -26,8 +26,6 @@ import { Component, Input, Output, EventEmitter  } from '@angular/core';
     .thumbnail { min-height: 210px; }
     .well div { color: #bbb; }
     .thumbnail { min-height: 210px; }
-    .well div.green { color: #003300;}
-    .bold { font-weight: bold; }
   `]
 })
 export class EventThumbnailComponent {
@@ -38,10 +36,9 @@ export class EventThumbnailComponent {
       this.eventClick.emit(this.event.name);
   }
 
-  getStartTimeClass() {
+  getStartTimeStyle() {
     if (this.event && this.event.time === '8:00 am')
-      return ['green', 'bold']
-    return []
+      return {color: '#003300', 'font-weight': 'bold'}
+    return {}
   }
-
 }

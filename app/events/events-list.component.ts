@@ -14,8 +14,7 @@ import { EventService } from './shared/event.service';
       </div>
     </div>
   `,
-  directives: [EventThumbnailComponent],
-  providers: [EventService]
+  directives: [EventThumbnailComponent]
 })
 export class EventsListComponent {
   events:any[]

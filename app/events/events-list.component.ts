@@ -21,8 +21,11 @@ export class EventsListComponent {
   events:any[]
   
   constructor(private eventService: EventService) {
-	  this.events = this.eventService.getEvents()
   }  
+
+  ngOnInit() {
+	  this.events = this.eventService.getEvents()
+  }
 
   handleEventClicked(data) {
     console.log('received:', data)

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { EventThumbnailComponent } from './event-thumbnail.component';
 import { EventService } from './shared/event.service';
 import { ToastrService } from '../common/toastr.service';
 
@@ -14,8 +13,7 @@ import { ToastrService } from '../common/toastr.service';
         <event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event"></event-thumbnail>
       </div>
     </div>
-  `,
-  directives: [EventThumbnailComponent]
+  `
 })
 export class EventsListComponent {
   events:any[]

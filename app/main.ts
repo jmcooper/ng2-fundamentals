@@ -1,4 +1,4 @@
-import { bootstrap }    from '@angular/platform-browser-dynamic';
-import { EventsAppComponent } from './events-app.component';
+import { platformBrowserDynamic }    from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
 
-bootstrap(EventsAppComponent, []);
+platformBrowserDynamic().bootstrapModule(AppModule)

@@ -10,7 +10,7 @@ import { ToastrService } from '../common/toastr.service';
     <hr/>
     <div class="row">
       <div *ngFor="let event of events" class="col-md-5">
-        <event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event"></event-thumbnail>
+        <event-thumbnail [event]="event"></event-thumbnail>
       </div>
     </div>
   `
@@ -19,17 +19,12 @@ export class EventsListComponent implements OnInit {
   events:any[]
   
   constructor(
-    private eventService: EventService,
-    private toastr: ToastrService
+    private eventService: EventService
     ) {
   }  
 
   ngOnInit() {
 	  this.events = this.eventService.getEvents()
-  }
-
-  handleEventClicked(eventName) {
-    this.toastr.success(eventName)
   }
 
 }

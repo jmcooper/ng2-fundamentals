@@ -28,7 +28,18 @@ import { CheckEventService } from './events/event-details/check-event.service'
   providers: [
     EventService, 
     ToastrService,
-    CheckEventService],
+    CheckEventService,
+    {
+      provide: 'canDeactivateCreateEvent', 
+      useValue: checkDirtyState     
+    }],
   bootstrap: [ EventsAppComponent ]
 })
 export class AppModule { }
+
+function checkDirtyState(component:CreateEventComponent) {
+  if (component.isDirty)
+    return window.confirm('You have not saved this event, Do you really want to cancel?') 
+
+  return true
+}

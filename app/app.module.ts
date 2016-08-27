@@ -9,7 +9,9 @@ import { EventThumbnailComponent } from './events/event-thumbnail.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component'
 import { CreateEventComponent } from './events/create-event.component'
+import { Error404Component } from './errors/404.component'
 import { appRoutes } from './routes';
+import { CheckEventService } from './events/event-details/check-event.service'
 
 @NgModule({
   imports: [
@@ -21,8 +23,12 @@ import { appRoutes } from './routes';
     EventThumbnailComponent, 
     NavBarComponent,
     EventDetailsComponent,
-    CreateEventComponent ],
-  providers: [EventService, ToastrService],
+    CreateEventComponent,
+    Error404Component ],
+  providers: [
+    EventService, 
+    ToastrService,
+    CheckEventService],
   bootstrap: [ EventsAppComponent ]
 })
 export class AppModule { }

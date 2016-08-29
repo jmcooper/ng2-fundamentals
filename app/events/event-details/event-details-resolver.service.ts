@@ -8,7 +8,6 @@ export class EventDetailsResolver implements Resolve<any> {
   resolve(route: ActivatedRouteSnapshot) {
     return this.eventService.getEvent(+route.params['id'])
       .map(event => {
-        console.log(event)
         if (event) {
           return event
         } else {

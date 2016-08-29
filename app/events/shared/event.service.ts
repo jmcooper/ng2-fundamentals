@@ -9,7 +9,11 @@ export class EventService {
     return subject;
   }
   getEvent(id: number) {
-    return EVENTS.find(event => event.id === id)
+    let event = EVENTS.find(event => event.id === id)
+
+    let subject = new Subject();
+    setTimeout(() => {subject.next(event); subject.complete(); }, 100);   
+    return subject;   
   }
 }
 

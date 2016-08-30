@@ -25,7 +25,6 @@ export class EventsListComponent implements OnInit {
     ) { }  
 
   ngOnInit() {
-    console.log('init')
     this.events = this.route.snapshot.data['events']
   }
 

@@ -2,7 +2,6 @@ import { Component } from '@angular/core'
 import { Router } from '@angular/router'
 
 @Component({
-  selector: 'create-event',
   template: `
     <h1>New Event</h1>
     <hr>

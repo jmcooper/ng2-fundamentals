@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 
 @Component({
-  selector: 'event-details',
   templateUrl: '/app/events/event-details/event-details.component.html',  
   styles: [`
     .container { padding-left:20px; padding-right:20px; }

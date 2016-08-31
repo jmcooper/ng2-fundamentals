@@ -4,7 +4,6 @@ import { ToastrService } from '../common/toastr.service'
 import { ActivatedRoute } from '@angular/router'
 
 @Component({
-  selector: 'events-list',
   template: `
     <div>
     <h1>Upcoming Angular 2 Events</h1>

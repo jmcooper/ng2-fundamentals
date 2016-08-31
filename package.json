@@ -27,7 +27,7 @@
     "@angular/upgrade": "2.0.0-rc.5",
     "core-js": "^2.4.0",
     "ng2f-bootstrap": "0.0.4",
-    "ng2f-server": "^0.2.2",
+    "ng2f-server": "^0.2.3",
     "reflect-metadata": "^0.1.3",
     "rxjs": "5.0.0-beta.6",
     "systemjs": "0.19.27",

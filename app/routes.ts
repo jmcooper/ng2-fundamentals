@@ -1,4 +1,4 @@
-import { RouterConfig } from '@angular/router';
+import { RouterConfig } from '@angular/router'
 import { EventsListComponent } from './events/events-list.component'
 import { EventDetailsComponent } from './events/event-details/event-details.component'
 import { CreateEventComponent } from './events/create-event.component'

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'create-event',
@@ -24,6 +24,6 @@ export class CreateEventComponent{
   }
   
   cancel() {
-    this.router.navigate(['/events']);
+    this.router.navigate(['/events'])
   }
 }

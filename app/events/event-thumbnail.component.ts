@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter  } from '@angular/core';
+import { Component, Input, Output, EventEmitter  } from '@angular/core'
 
 @Component({
   selector: 'event-thumbnail',
@@ -30,10 +30,10 @@ import { Component, Input, Output, EventEmitter  } from '@angular/core';
 })
 export class EventThumbnailComponent {
   @Input() event:any
-  @Output() eventClick = new EventEmitter;
+  @Output() eventClick = new EventEmitter
 
   handleClickMe() {
-      this.eventClick.emit(this.event.name);
+      this.eventClick.emit(this.event.name)
   }
 
   getStartTimeStyle():any {

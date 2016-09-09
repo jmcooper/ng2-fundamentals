@@ -16,6 +16,10 @@ button {
   color: #555;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .toast-success {
   background-color: #51a351;
 }

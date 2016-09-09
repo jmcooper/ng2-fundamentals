@@ -23,10 +23,11 @@ true}">All Events</a>
           </ul>
         </li>
       </ul>
-      <div class="navbar-header navbar-right">
+      <div  class="navbar-header navbar-right">
         <ul class="nav navbar-nav">
           <li>
-            <a [routerLink]="['user/profile']">Welcome John</a>
+            <a [hidden]="!auth.isAuthenticated()">Welcome {{auth.currentUser?.firstName}}</a>
+            <a [hidden]="auth.isAuthenticated()" [routerLink]="['user/login']">Login</a>
           </li>
         </ul>
       </div>

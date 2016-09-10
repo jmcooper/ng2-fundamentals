@@ -13,8 +13,8 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    var firstName = new FormControl();
-    var lastName = new FormControl();
+    var firstName = new FormControl(this.authService.currentUser.firstName);
+    var lastName = new FormControl(this.authService.currentUser.lastName);
 
     this.profileForm = new FormGroup({
       firstName: firstName,

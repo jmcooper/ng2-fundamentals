@@ -26,7 +26,7 @@ true}">All Events</a>
       <div  class="navbar-header navbar-right">
         <ul class="nav navbar-nav">
           <li>
-            <a [hidden]="!auth.isAuthenticated()">Welcome {{auth.currentUser?.firstName}}</a>
+            <a [hidden]="!auth.isAuthenticated()" [routerLink]="['user/profile']">Welcome {{auth.currentUser?.firstName}}</a>
             <a [hidden]="auth.isAuthenticated()" [routerLink]="['user/login']">Login</a>
           </li>
         </ul>

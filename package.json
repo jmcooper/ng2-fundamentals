@@ -34,7 +34,7 @@
     "ng2f-server": "~0.2.3"
   },
   "devDependencies": {
-    "concurrently": "~3.1.0",
+    "concurrently": "2.2.0",
     "typescript": "~2.0.3",
     "@types/core-js": "~0.9.34",
     "@types/node": "~6.0.46"

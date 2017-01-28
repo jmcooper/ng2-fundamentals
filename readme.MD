@@ -7,8 +7,8 @@ This is the getting started package for the Pluralsight course on Angular 2 Fund
 The course is currently up-to-date.
 
 
-To get Started
--------------------
+Getting Started
+---------------
 Follow along with the course linked above. To start the server:
 
 ```

@@ -36,7 +36,7 @@
   "devDependencies": {
     "concurrently": "2.2.0",
     "typescript": "~2.0.3",
-    "@types/core-js": "~0.9.34",
+    "@types/core-js": "0.9.36",
     "@types/node": "~6.0.46"
   },
   "repository": {}

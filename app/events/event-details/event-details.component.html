@@ -8,6 +8,7 @@
   </div>
 
   <div class="row">
+
     <div class="col-md-6">
       <div><strong>Date:</strong> {{event?.date}}</div>
       <div><strong>Time:</strong> {{event?.time}}</div>
@@ -20,5 +21,11 @@
         {{event?.location?.city}}, {{event?.location?.country}}
       </address>
     </div>
+
   </div>
+
+  <hr/>
+
+  <session-list [sessions]="event?.sessions"></session-list>
+
 </div>

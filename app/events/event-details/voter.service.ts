@@ -6,8 +6,8 @@ export class VoterService{
         session.voters = session.voters.filter(voter => voter !== voterName);
     }
 
-    addVoter(sessoin: ISession, voterName: string){
-        sessoin.voters.push(voterName);
+    addVoter(session: ISession, voterName: string){
+        session.voters.push(voterName);
     }
 
     userHasVoted(session: ISession, voterName: string){

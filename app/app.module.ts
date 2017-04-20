@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { RouterModule } from '@angular/router'
+import { HttpModule } from '@angular/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+
 import {
     EventsListComponent,
     EventThumbnailComponent,
     EventService,
     EventDetailsComponent,
     CreateEventComponent,
-    EventRouteActivator,
+    EventResolver,
     EventListResolver,
     CreateSessionComponent,
     SessionListComponent,
@@ -39,6 +41,7 @@ declare let jQuery : Object;
     imports: [
         BrowserModule,
         FormsModule,
+        HttpModule,
         ReactiveFormsModule,
         RouterModule.forRoot(appRoutes)
     ],
@@ -70,8 +73,8 @@ declare let jQuery : Object;
             useValue: jQuery
         }, 
         {
-            provide: EventRouteActivator,
-            useClass: EventRouteActivator
+            provide: EventResolver,
+            useClass: EventResolver
         },
         EventListResolver,
         VoterService,

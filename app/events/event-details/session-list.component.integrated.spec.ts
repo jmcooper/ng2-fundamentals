@@ -1,5 +1,5 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing'
-import { DebugElement } from '@angular/core'
+import { DebugElement, Component, NO_ERRORS_SCHEMA } from '@angular/core' // NO_ERRORS_SCHEMA 
 import { SessionListComponent } from './session-list.component'
 import { UpvoteComponent } from './upvote.component'
 import { DurationPipe } from '../shared/duration.pipe'
@@ -8,6 +8,7 @@ import { AuthService } from '../../user/auth.service'
 import { VoterService } from './voter.service'
 import { ISession } from '../shared/event.model'
 import { By } from '@angular/platform-browser'
+
 
 describe('SessionListComponent', () => {
     let fixture: ComponentFixture<SessionListComponent>,
@@ -39,7 +40,7 @@ describe('SessionListComponent', () => {
                 { provide: VoterService, useValue: mockVoterService }
             ],
             schemas: [
-
+                //NO_ERRORS_SCHEMA
             ]
         }).compileComponents()        
     }))
@@ -63,8 +64,11 @@ describe('SessionListComponent', () => {
             component.ngOnChanges();
             fixture.detectChanges();
 
-            expect(element.querySelector('[well-title]').textContent).toContain('Session 1');
-
+            //RAW
+            //expect(element.querySelector('[well-title]').textContent).toContain('Session 1');
+            
+            //Angular
+            expect(debugEl.query(By.css('[well-title]')).nativeElement.textContent).toContain('Session 1');
         })
 
     })

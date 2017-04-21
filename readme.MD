@@ -34,3 +34,5 @@ Linting
 
 npm install tslint --save-dev
 
+npm install tslint -g  <--- installing globally
+

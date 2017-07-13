@@ -9,12 +9,7 @@
   },
   "keywords": [],
   "author": "",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "dependencies": {
     "@angular/common": "4.0.0",
     "@angular/compiler": "4.0.0",
